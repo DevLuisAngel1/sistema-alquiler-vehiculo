@@ -1,8 +1,11 @@
-package com.utp.proyecto.model;
+package com.utp.proyecto.dto;
+
+import com.utp.proyecto.model.EstadoVehiculo;
+import com.utp.proyecto.model.TipoVehiculo;
 
 import java.math.BigDecimal;
 
-public class Vehiculo {
+public class VehiculoResponse {
 
     private Long id;
     private String placa;
@@ -13,12 +16,14 @@ public class Vehiculo {
     private TipoVehiculo tipo;
     private EstadoVehiculo estado;
 
-    public Vehiculo() {
+    public VehiculoResponse() {
     }
 
-    public Vehiculo(Long id, String placa, String marca, String modelo,
-                     Integer anio, BigDecimal precioPorDia,
-                     TipoVehiculo tipo, EstadoVehiculo estado) {
+    public VehiculoResponse(Long id, String placa, String marca,
+                            String modelo, Integer anio,
+                            BigDecimal precioPorDia,
+                            TipoVehiculo tipo,
+                            EstadoVehiculo estado) {
 
         this.id = id;
         this.placa = placa;
@@ -34,63 +39,32 @@ public class Vehiculo {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     public String getPlaca() {
         return placa;
-    }
-
-    public void setPlaca(String placa) {
-        this.placa = placa;
     }
 
     public String getMarca() {
         return marca;
     }
 
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
-
     public String getModelo() {
         return modelo;
-    }
-
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
     }
 
     public Integer getAnio() {
         return anio;
     }
 
-    public void setAnio(Integer anio) {
-        this.anio = anio;
-    }
-
     public BigDecimal getPrecioPorDia() {
         return precioPorDia;
-    }
-
-    public void setPrecioPorDia(BigDecimal precioPorDia) {
-        this.precioPorDia = precioPorDia;
     }
 
     public TipoVehiculo getTipo() {
         return tipo;
     }
 
-    public void setTipo(TipoVehiculo tipo) {
-        this.tipo = tipo;
-    }
-
     public EstadoVehiculo getEstado() {
         return estado;
     }
-
-    public void setEstado(EstadoVehiculo estado) {
-        this.estado = estado;
-    }
 }
+
